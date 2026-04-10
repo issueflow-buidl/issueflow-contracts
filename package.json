@@ -1,19 +1,17 @@
 {
   "name": "issueflow-contracts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Smart contracts for IssueFlow bounty system",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "hardhat compile",
+    "test": "hardhat test"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "hardhat": "^3.3.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^6.0.2"
+    "hardhat": "^3.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
   }
 }
