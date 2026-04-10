@@ -1,9 +1,13 @@
-import { HardhatUserConfig } from "hardhat/types";
+import type { HardhatUserConfig } from "hardhat/types/config.js";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24",
+  solidity: {
+    version: "0.8.24",
+  },
   networks: {
-    hardhat: {},
+    hardhat: {
+      type: "edr-simulated",
+    },
   },
 };
 
