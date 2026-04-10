@@ -2,6 +2,7 @@
   "name": "issueflow-contracts",
   "version": "1.0.0",
   "description": "Smart contracts for IssueFlow bounty system",
+  "type": "module",
   "scripts": {
     "build": "hardhat compile",
     "test": "hardhat test"
@@ -12,6 +13,6 @@
   "devDependencies": {
     "hardhat": "^3.0.0",
     "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^22.0.0"
   }
 }
