@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
         with:
-          node-version: 22
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 10
-      - run: pnpm install
-      - run: pnpm run build
+          targets: wasm32-unknown-unknown
+
+      - name: Build contracts
+        run: cargo build --target wasm32-unknown-unknown --release
+
+      - name: Run tests
+        run: cargo test
