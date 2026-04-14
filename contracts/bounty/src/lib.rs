@@ -11,4 +11,10 @@ impl BountyContract {
         let client = token::Client::new(&env, &token);
         client.transfer(&from, &to, &amount);
     }
+
+    pub fn claim_bounty(env: Env, token: Address, maintainer: Address, contributor: Address, amount: i128) {
+        maintainer.require_auth();
+        let client = token::Client::new(&env, &token);
+        client.transfer(&env.current_contract_address(), &contributor, &amount);
+    }
 }
